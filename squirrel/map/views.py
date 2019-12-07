@@ -10,6 +10,6 @@ def sighting_map(request, template_name='map/map.html'):
     context = {
             'sightings' : sightings,
     }
-    return render(request, template_name, context)from django.shortcuts import render
+    return render(request, template_name, context)
 
 # Create your views here.
