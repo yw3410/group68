@@ -66,7 +66,7 @@ class Sighting(models.Model):
 	    ('',''),
     )
 
-    fur_color = models.CharField(
+    primary_fur_color = models.CharField(
             max_length=10,
 	    choices=FUR_CHOICES,
 	    default=GRAY,
