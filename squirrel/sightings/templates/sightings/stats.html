@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>General Information For Squirrel Information</title>
+  </head>
+  <body>
+    <h1 class="display-4"> Stats for Sightings </h1>
+
+      <h4> The number of squirrels located in The Central Park is: {{all_count}}</h4>
+      <h4> The number of adult squirrels is: {{adult_count}}</h4>
+      <h4> The number of juvenile squirrels is: {{juvenile_count}}</h4>
+      <h4> The number of squirrels that are running is: {{running}}</h4>
+      <h4> The number of squirrels that are chasing is: {{chasing}}</h4>
+      <h4> The number of squirrels that are climbing is: {{climbing}}</h4>
+      <h4> The number of squirrels that are eating is: {{eating}}</h4>
+      <h4> The number of squirrels that are foraging is: {{foraging}}</h4>
+      <a href="{% url "sighting_list"%}">Return To Sighting</a>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
+</html>
