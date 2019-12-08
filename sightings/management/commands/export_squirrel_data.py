@@ -1,19 +1,17 @@
 from django.core.management.base import BaseCommand,CommandError
 from sightings.models import Sighting
+import csv
+from django.http import HttpResponse
 
 class Command(BaseCommand):
-    help='Export CSV'
-
+    help='Export CSV file to the database'
     def add_arguments(self,path):
         path.add_argument('csv_file',nargs='+',type=str)
 
     def handle(self,*arg,**options):
-        import csv
-        from django.http import HttpResponse
-        #writing header
         path=str(options['csv_file'][0])
-        with open(path,'w') as f:
-            writer = csv.writer(f)
+        with open(path,'w') as csvfile:
+            writer = csv.writer(csvfile)
             header=['latitude',
                     'longitude',
                     'squirrel_id',
@@ -37,8 +35,8 @@ class Command(BaseCommand):
                     'approaches',
                     'indifferent',
                     'runs_from',]
+
             writer.writerow(header)
-            #writing data
             squirrel_data=Sighting.objects.all()
             for data in squirrel_data:
                 writer.writerow([data.latitude,
